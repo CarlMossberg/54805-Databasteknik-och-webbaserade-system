@@ -12,6 +12,13 @@ namespace Testing2.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Index(FormCollection collection)
+        {
+            ViewBag.Message = "Nu är jag i den andra indexen (HttpPost)";
+            ViewBag.Message += collection["Textruta"].ToString();
+            return View();
+        }
 
         public ActionResult About()
         {

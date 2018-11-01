@@ -24,8 +24,17 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Calles egna text</h2>
+        <p>Här kommer det komma lite mer text</p>
+        <p>Vad betyder en P tagg egentligen </p>
+        @using (Html.BeginForm())
+         {
+            <p>@Html.TextBox("Textruta")</p>
+            <p>@ViewBag.Message</p>
+            <input type="submit" class=" btn btn-default" value="Tryck här"/>
+        }
+
+
+
     </div>
 </div>
