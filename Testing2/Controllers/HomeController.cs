@@ -44,6 +44,37 @@ namespace Testing2.Controllers
             ViewBag.Message = Session["MittData"].ToString();
             return View();
         }
+       
+        public ActionResult Index4()
+        {
+               return View();
+        }
+        [HttpPost]
+        public ActionResult Index5(FormCollection collection)
+        {
+            ViewBag.Message = collection["Textruta"].ToString();
+            return View();
+        }
+        public ActionResult Index6()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index7(FormCollection collection)
+        {
+            ViewBag.Message = "Nu är jag i den andra indexen (HttpPost)";
+            if (collection["mybutton"] == "Tryck")
+            {
+                ViewBag.Message += " Du tryckte på första knappen ";
+                ViewBag.Message += collection["Textruta"].ToString();
+            }
+            if (collection["mybutton2"] == "Tryck")
+            {
+                ViewBag.Message += " Du tryckte på andra knappen ";
+                ViewBag.Message += collection["Textruta2"].ToString();
+            }
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
