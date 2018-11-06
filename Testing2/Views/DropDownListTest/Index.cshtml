@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="Feedback">Länder:</label>
+        <div class="col-lg-10">
+            @Html.DropDownList("feedback", ViewData["country"] as List<SelectListItem>)
+        </div>    
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-warning" value="Klick inte här" />
+        </div>
+
+    </div>
+}
